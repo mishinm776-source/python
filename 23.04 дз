@@ -1,0 +1,21 @@
+A = int(input("A = "))
+B = int(input("B = "))
+K = int(input("K = "))
+
+found = []
+
+for num in range(A, B + 1):
+    product = 1
+    for digit in str(num):
+        if digit != '0': 
+            product *= int(digit)
+    
+    if product == K:
+        found.append(num)
+
+if len(found) == 0:
+    print("нет подходящих чисел")
+else:
+    print("количество:", len(found))
+    print("минимум:", min(found))
+    print("максимум:", max(found))
