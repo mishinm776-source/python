@@ -1,0 +1,43 @@
+counter = 0
+while counter < 7:
+    print("купи слона")
+    counter += 1
+a = int(input("введите число a: "))
+b = int(input("введите число b: "))
+while 0 < a < b:
+    print("вот список натуральных чисел от a до b: ")
+    for i in range(a, b + 1):
+        print(i)
+    break
+# print("купи слона")
+# while True:
+#     slon = input()
+#     print("вот все говорят <" + slon + ">, а ты купи слона")
+    
+    
+print ("угадай число от 1 до 7")
+while True:
+        number = int(input())
+        
+        if number < 5:
+            print("больше")
+        elif number >5:
+            print("меньше")
+        else:   
+            print("ты угадал число")
+            print("теперь у тебя 3 попытки, угадай число от 7 до 15")
+            counter = 3
+            while counter > 0:
+                number_2 = int(input())
+                if number_2 < 10:
+                    print("число больше")
+                    counter -= 1
+                elif number_2 > 10:
+                    print("число меньше")
+                    counter -= 1
+                else:   
+                    print("ты угадал")
+                    break
+                if counter == 0:
+                    print("попытки закончились")
+            break
