@@ -1,0 +1,19 @@
+# читаем а, b, k из одной строки
+a=int(input("введите число a: "))
+b=int(input("введите число b: "))
+k=int(input("введите число k: "))
+res = []
+# b + 1 чтобы включить правую границу
+for i in range(a, b + 1):
+    product = 1
+    for digit in str(i):
+        if digit != '0':
+            product *= int(digit)
+    
+    if product == k:
+        res.append(i)
+if not res:
+    print("подходящих чисел нет")
+else:
+    # количество, минимум и максимум
+    print("длина списка:", len(res), ", минимум:", min(res), ", максимум:", max(res))
