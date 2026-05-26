@@ -1,0 +1,68 @@
+# задание 1
+num1 = int(input("введите число: "))
+for i in range(1, num1 + 1):
+    print(i)
+# задание 2
+num2 = int(input("введите число: "))
+for i in range(num2, 0, -1):
+    print(i)
+# задание 3
+for i in range(2, 21, 2):
+    print(i)
+# задание 4
+inp_4 = int(input("сколько чисел сложить? "))
+sum_4 = 0
+for i in range(inp_4):
+    val_4 = int(input("введите число: "))
+    sum_4 += val_4
+print("сумма введенных чисел:", sum_4)
+# задание 5
+for i in range(1, 11):
+    for y in range(1, 11):
+        print(i, "*", y, "=", i * y)
+# задание 6 
+mys_6 = 30
+count_6 = 0
+while True:
+    count_6 += 1
+    inp_6 = int(input("введите число от 1 до 50: "))
+    if inp_6 == mys_6:
+        print("победа")
+        break
+    elif inp_6 > mys_6:
+        print("меньше")
+    else:
+        print("больше")
+print("попыток потрачено:", count_6)
+# задание 7
+txt_7 = input("введите текст: ").lower()
+vow_7 = "фывавенгармипзя"
+sum_7 = 0
+for char in txt_7:
+    if char in vow_7:
+        sum_7 += 1
+print("гласных в строке:", sum_7)
+# задание 8
+num_8 = int(input("введите число для факториала: "))
+fac_8 = 1
+for i in range(1, num_8 + 1):
+    fac_8 *= i
+print("факториал равен:", fac_8)
+# задание 9
+list_9 = [12, -5, 0, 44, 23]
+max_9 = list_9[0]
+for num in list_9:
+    if num > max_9:
+        max_9 = num
+print("максимальное число:", max_9)
+# задание 10
+num_10 = int(input("сколько чисел фибоначчи вывести? "))
+a = 0
+b = 1
+count_10 = 0
+while count_10 < num_10:
+    print(a, end=" ")
+    next_val = a + b
+    a = b
+    b = next_val
+    count_10 += 1
