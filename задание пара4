@@ -1,0 +1,33 @@
+# int1 = 11 #int 
+# int2 = 22
+# print(int1 + int2)
+# float = 3.14 #float
+# float2 = 2.78
+# print(float * float2)
+# str ="message" #string
+# print(str)
+# list = [1,2,3,4,5] #list
+# print(list)
+# dict = {"Hello": "World"} #dict
+# print(dict["Hello"])
+# tuple = (1, 2, 3) #tuple
+# print(tuple[0])
+# bool = True #bool
+# if bool == True:
+#     print("True")
+# Арифметический
+print(10 + 3)
+# Сравнения
+print(5 > 3)
+# Логический
+print(True and False)
+# Присваивания
+x = 10
+x += 5
+print(x)
+# Принадлежности
+print("голубика" in ["клубника", "голубика"])
+# Тождественности
+a = [1, 2]
+b = a
+print(a is b)
