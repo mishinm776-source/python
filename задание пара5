@@ -1,0 +1,56 @@
+# def add (a,b):
+#     return a + b
+# def sub (a,b):
+#     return a - b
+# def mul (a,b):
+#     return a * b
+# def div (a,b):
+#     if b == 0 or a == 0:
+#         return "на ноль делить нельзя"
+#     return a / b
+# def sqr(a):
+#     return a * a
+# result1 = add(5, 3)
+# result2 = sub(5, 3)
+# result3 = mul(5, 3)
+# result4 = div(5, 3)
+# result5 = sqr(5)
+# задание 1
+def format_price(price, currency="руб", discount=0):
+    if price < 0 or discount < 0 or discount > 100:
+        return "Ошибка: неверные данные"
+    final = price * (1 - discount / 100)
+    return f"{final:.2f} {currency}".strip()
+print(format_price(1500))
+print(format_price(1500, "", 20))
+print(format_price(-100))
+print(format_price(1000, "₽", 150))
+# задание 2
+nums = [-5, 0, 3, 7, -2, 9, 1, -8]
+result = list(map(lambda x: x ** 2, filter(lambda x: x > 0, nums)))
+print(result)
+# задание 3
+def transform_list(data, func):
+    return list(map(func, data))
+print(transform_list(["a", "b", "c"], lambda x: x.upper()))
+print(transform_list([1, 2, 3], lambda x: x * 2))
+# кз
+products = [
+    {"name": "Laptop",     "price": 950, "rating": 4.5, "in_stock": True},
+    {"name": "Mouse",      "price": -10, "rating": 4.8, "in_stock": True},
+    {"name": "Keyboard",   "price": 120, "rating": 3.9, "in_stock": False},
+    {"name": "Monitor",    "price": 300, "rating": 4.2, "in_stock": True},
+    {"name": "Headphones", "price": 80,  "rating": 4.6, "in_stock": True},
+]
+def is_valid(product):
+    return product["price"] > 0 and product["rating"] >= 4.0 and product["in_stock"]
+valid_products = list(filter(is_valid, products))
+with_final_price = list(map(
+    lambda p: {**p, "final_price": p["price"] * 0.85},
+    valid_products
+))
+sorted_products = sorted(with_final_price, key=lambda p: p["final_price"])
+def print_catalog(items):
+    for item in items:
+        print(f"{item['name']} | Цена: {item['price']:.2f} | Итог: {item['final_price']:.2f}")
+print_catalog(sorted_products)
